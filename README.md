@@ -6,7 +6,7 @@ A mongo-based cache for Play applications
 
 # Motivation
 
-The play cache is nice, but in many real-world applications, you want a cache that lives outside the web server process, because your web app might actually be running on multiple nodes (for load-balancing and/or failover reasons). A common scenario is a Heroku app with multiple dynos.
+The default Play cache is nice, but in many real-world applications, you want a cache that lives outside the web server process, because your web app might actually be running on multiple nodes (for load-balancing and/or failover reasons). A common scenario is a Heroku app with multiple dynos.
 
 So you'll want a cache that resides in its own service, and can be accessed by all your web server processes. Memcached could do the trick. We started with memcached (via memcachier) but found it unreliable -- we had fairly frequent timeouts from the memcachier nodes. So we moved to Mongo, which has been working fine for us.
 
