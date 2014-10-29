@@ -25,7 +25,12 @@ import play.api.cache.Cache
 import play.api.Play.current
 ```
 
-And use the Cache object.
+And use the Cache object as you would any other way:
+
+```
+Cache.getOrElse("some-key")
+Cache.set("key", "some value", expiration = 100)
+```
 
 # Notes
 
