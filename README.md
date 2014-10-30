@@ -37,3 +37,4 @@ Cache.set("key", "some value", expiration = 100)
 - The starter play project was generated with Play 2.1.3. Sorry that's a bit old.
 - Change the name of your database in the mongo connection string in application.conf
 - Change the name of the collection to use in CachePlugin.scala
+- This is a fairly basic solution that's probably good enough for many use cases — but it was not designed or tested for applications that require extreme throughput or ultra low latency or anything like that.
